@@ -2,6 +2,8 @@ package io.github.addoncommunity.galactifun.api.universe.attributes.atmosphere;
 
 import javax.annotation.Nonnull;
 
+import io.github.addoncommunity.galactifun.core.CoreRecipeType;
+
 import lombok.Getter;
 
 import org.bukkit.inventory.ItemStack;
@@ -32,7 +34,11 @@ public class BasicGas {
     public final static Gas HYDROCARBONS = new Gas("HYDROCARBONS", "碳氢化合物", "725691372e0734bfb57bb03690490661a83f053a3488860df3436ce1caa24d11");
     public final static Gas HYDROGEN = new Gas("HYDROGEN", "氢气", "725691372e0734bfb57bb03690490661a83f053a3488860df3436ce1caa24d11");
     public final static Gas SULFUR = new Gas("SULFUR", "硫", "c7a1ece691ad28d17bbbcecb22270c85e1c9581485806264c676de67c272e2d0");
-    public final static Gas AMMONIA = new Gas("AMMONIA", "氨气", "c7a1ece691ad28d17bbbcecb22270c85e1c9581485806264c676de67c272e2d0");
+    public final static Gas AMMONIA = new Gas("AMMONIA", "氨气", "c7a1ece691ad28d17bbbcecb22270c85e1c9581485806264c676de67c272e2d0", CoreRecipeType.CHEMICAL_REACTOR, new ItemStack[] {
+            NITROGEN.item, HYDROGEN.item.asQuantity(3), null,
+            null, null, null,
+            null, null, null
+    });
     public final static Gas OTHER = new Gas("OTHER", "其他气体");
 
     static {
